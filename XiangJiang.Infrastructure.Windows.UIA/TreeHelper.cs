@@ -38,8 +38,7 @@ namespace XiangJiang.Infrastructure.Windows.UIA
                 {
                     if (nextNode == rootNode) continue;
                     var aeChildNode = GetChildNode(aeParentNode, nextNode);
-                    if (aeChildNode == null)
-                        throw new ArgumentNullException($"未能找到 {nextNode} 节点.");
+                    if (aeChildNode == null) continue;
                     if (selectedNode == aeChildNode.Current.Name)
                     {
                         var spChildNode = aeChildNode.GetSelectionItemPattern();
