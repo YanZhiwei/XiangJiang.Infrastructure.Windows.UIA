@@ -52,15 +52,7 @@ jobs:
       run: dotnet test -c $env:Configuration
       env:
         Configuration: ${{ matrix.configuration }}
-    
-    - name: Install Nuget
-      run: | 
-             $sourceNugetExe = "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
-             $targetNugetExe = "nuget.exe"
-             Invoke-WebRequest $sourceNugetExe -OutFile $targetNugetExe
-    - name: create package
-      run: |
-           .\nuget pack .\XiangJiang.Infrastructure.Windows.UIA.csproj -Prop Configuration=Release -IncludeReferencedProjects
-    - name: Push generated package to GitHub registry
-      run: |
-          .\nuget push .\XiangJiang.Infrastructure.Windows.UIA\*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NugetKey }} -NoSymbols
+    - name: Pack
+      run: dotnet build --configuration Release
+    - name: Push
+      run: dotnet nuget push .\bin\Release\*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NugetKey }} --skip-duplicate --no-symbols 1
