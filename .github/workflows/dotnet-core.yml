@@ -34,7 +34,7 @@ jobs:
     - name: Setup NuGet
       uses: nuget/setup-nuget@v1
       with:
-        nuget-api-key: ${{ secrets.NuGetAPIKey }}
+        nuget-api-key: ${{ secrets.NugetKey }}
         nuget-version: '5.x'
 
     # 还原 NuGet 包
@@ -57,4 +57,4 @@ jobs:
       run:  .\nuget_pack.bat
 
     - name: Push
-      run: dotnet nuget push .\bin\Release\*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NugetKey }} --skip-duplicate --no-symbols 1
+      run: dotnet nuget push .\*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NugetKey }} --skip-duplicate --no-symbols 1
