@@ -53,8 +53,8 @@ jobs:
       env:
         Configuration: ${{ matrix.configuration }}
     
-    - name: create package
-      run: nuget pack
+    - name: Nuget Package
+      run: dotnet nuget pack
            
     - name: Push
       run: dotnet nuget push .\bin\Release\*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NugetKey }} --skip-duplicate --no-symbols 1
