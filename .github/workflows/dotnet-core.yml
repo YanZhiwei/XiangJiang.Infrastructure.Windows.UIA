@@ -9,13 +9,13 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: .NetFramework Action Template
-        uses: auycro/netframework-action-template@v0.0.2
-      - name: Install dependencies
-        run: dotnet restore
-      - name: Build
-        run: dotnet build --configuration Release
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build --file Dockerfile.msbuild --tag auycro/msbuild .
+        #run: docker build . --file Dockerfile --tag auycro/dotnet:$(date +%s)
+      - name: Run the Docker image
+        run: docker run --rm auycro/msbuild --version
       - name: Test
         run: dotnet test --no-restore --verbosity normal
       - name: Install Nuget
