@@ -54,7 +54,7 @@ jobs:
         Configuration: ${{ matrix.configuration }}
     
     - name: Nuget Package
-      run: dotnet nuget pack
+      run: nuget pack XiangJiang.Infrastructure.Windows.UIA.nuspec
            
     - name: Push
       run: dotnet nuget push .\bin\Release\*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NugetKey }} --skip-duplicate --no-symbols 1
