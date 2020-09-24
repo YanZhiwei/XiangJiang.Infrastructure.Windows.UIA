@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace XiangJiang.Infrastructure.Windows.UIA.Properties {
+namespace XiangJiang.Windows.UIA.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace XiangJiang.Infrastructure.Windows.UIA.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("XiangJiang.Infrastructure.Windows.UIA.Properties.Resource", typeof(Resource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("XiangJiang.Windows.UIA.Properties.Resource", typeof(Resource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

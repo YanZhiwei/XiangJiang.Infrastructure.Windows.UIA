@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Automation;
 using XiangJiang.Core;
-using XiangJiang.Infrastructure.Windows.UIA.Core;
+using XiangJiang.Windows.UIA.Core;
 
-namespace XiangJiang.Infrastructure.Windows.UIA
+namespace XiangJiang.Windows.UIA
 {
     /// <summary>
     ///     ComboBox 控件

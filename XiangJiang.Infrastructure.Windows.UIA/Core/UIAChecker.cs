@@ -1,9 +1,9 @@
 ﻿using System.Windows.Automation;
 using XiangJiang.Core;
-using XiangJiang.Infrastructure.Windows.UIA.Properties;
+using XiangJiang.Windows.UIA.Properties;
 using XiangJiang.Model;
 
-namespace XiangJiang.Infrastructure.Windows.UIA.Core
+namespace XiangJiang.Windows.UIA.Core
 {
     public static class UIAChecker
     {

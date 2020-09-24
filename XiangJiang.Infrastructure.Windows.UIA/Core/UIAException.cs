@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace XiangJiang.Infrastructure.Windows.UIA.Core
+namespace XiangJiang.Windows.UIA.Core
 {
     public sealed class UIAException : Exception
     {
