@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace XiangJiang.Windows.UIA.Properties {
+namespace XiangJiang.Windows.UIA.Localization {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace XiangJiang.Windows.UIA.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("XiangJiang.Windows.UIA.Properties.Resource", typeof(Resource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("XiangJiang.Windows.UIA.Localization.Resource", typeof(Resource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -47,8 +47,8 @@ namespace XiangJiang.Windows.UIA.Properties {
         }
         
         /// <summary>
-        ///   重写当前线程的 CurrentUICulture 属性
-        ///   重写当前线程的 CurrentUICulture 属性。
+        ///   重写当前线程的 CurrentUICulture 属性，对
+        ///   使用此强类型资源类的所有资源查找执行重写。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         internal static global::System.Globalization.CultureInfo Culture {
@@ -61,7 +61,7 @@ namespace XiangJiang.Windows.UIA.Properties {
         }
         
         /// <summary>
-        ///   查找类似 AutomationId &apos;{0}&apos; 或 Name &apos;{1}&apos; 控件类型不是 {2}. 的本地化字符串。
+        ///   查找类似 AutomationId &apos;{0}&apos; 或 Name &apos;{1}&apos; 控件类型不是 {2} 的本地化字符串。
         /// </summary>
         internal static string Typenotsupported {
             get {

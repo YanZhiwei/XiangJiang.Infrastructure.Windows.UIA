@@ -1,6 +1,6 @@
 ﻿using System.Windows.Automation;
 using XiangJiang.Core;
-using XiangJiang.Windows.UIA.Properties;
+using XiangJiang.Windows.UIA.Localization;
 using XiangJiang.Model;
 
 namespace XiangJiang.Windows.UIA.Core
