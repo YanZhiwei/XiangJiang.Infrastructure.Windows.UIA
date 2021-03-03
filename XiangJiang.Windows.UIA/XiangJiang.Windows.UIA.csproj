@@ -1,45 +1,43 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>net5.0-windows</TargetFramework>
-    <UseWPF>true</UseWPF>
-    <Authors>YanZhiwei</Authors>
-    <Company>YanZhiwei</Company>
-    <Product>XiangJiang</Product>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Description>Based on. Net 5 UIA tool class library, using the document: https://github.com/YanZhiwei/XiangJiang.Windows.UIA/wiki; Welcome to pull request or star.</Description>
-    <PackageProjectUrl>https://github.com/YanZhiwei/XiangJiang.Windows.UIA</PackageProjectUrl>
-    <PackageIcon>nugetico.png</PackageIcon>
-    <RepositoryUrl>https://github.com/YanZhiwei/XiangJiang</RepositoryUrl>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.0.0</Version>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="XiangJiang" Version="1.0.9" />
-    <PackageReference Include="XiangJiang.Windows.Abstractions" Version="2.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Localization\Resource.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resource.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Localization\Resource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\.assets\nugetico.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>net5.0-windows;net461</TargetFrameworks>
+        <UseWPF>true</UseWPF>
+        <Authors>YanZhiwei</Authors>
+        <Company>YanZhiwei</Company>
+        <Product>XiangJiang</Product>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Description>Based on. Net 5 UIA tool class library, using the document: https://github.com/YanZhiwei/XiangJiang.Windows.UIA/wiki; Welcome to pull request or star.</Description>
+        <PackageProjectUrl>https://github.com/YanZhiwei/XiangJiang.Windows.UIA</PackageProjectUrl>
+        <PackageIcon>nugetico.png</PackageIcon>
+        <RepositoryUrl>https://github.com/YanZhiwei/XiangJiang</RepositoryUrl>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>2.0.1</Version>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="XiangJiang" Version="2.0.0" />
+        <PackageReference Include="XiangJiang.Windows.Abstractions" Version="2.0.1" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
+        <Reference Include="UIAutomationClient" />
+        <Reference Include="UIAutomationTypes" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Update="Localization\Resource.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Resource.resx</DependentUpon>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Update="Localization\Resource.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="..\.assets\nugetico.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
 </Project>
